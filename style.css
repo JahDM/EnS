@@ -4,48 +4,57 @@
 }
 
 body {
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,54,1) 14%, rgba(0,212,255,1) 100%);
+  background: rgb(2, 0, 36);
+  background: radial-gradient(
+    circle,
+    rgb(102, 99, 160) 14%,
+    rgb(160, 187, 40) 48%,
+    rgba(0, 212, 255, 1) 76%
+  );
 }
 
-#container{
+#container {
+  display: flex;
+  justify-content: center;
+}
+#divContainer{
   display: flex;
   justify-content: center;
 }
 #bigContainer {
   display: grid;
-  grid-gap: 2px;
+  grid-gap: 1px;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
-  border: solid 1px grey;
-  padding: 2px;
+  padding: 1px;
+  max-height: 600px;
+  max-width: 600px;
 }
 
 .box {
-  padding: 1em;
+  padding: 7px;
   border: 1px solid #ddd;
   text-align: center;
-
 }
-#buttonHeading{
+#buttonHeading {
   display: flex;
   justify-content: center;
 }
 /* CSS */
 .button {
   appearance: button;
-  background-color: #1899D6;
+  background-color: #1899d6;
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-family: din-round,sans-serif;
+  font-family: din-round, sans-serif;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   line-height: 20px;
   margin: 0;
   outline: none;
@@ -55,7 +64,7 @@ body {
   text-transform: uppercase;
   touch-action: manipulation;
   transform: translateZ(0);
-  transition: filter .2s;
+  transition: filter 0.2s;
   user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
@@ -66,12 +75,12 @@ body {
 
 .button:after {
   background-clip: padding-box;
-  background-color: #1CB0F6;
+  background-color: #1cb0f6;
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
   bottom: -4px;
-  content: "";
+  content: '';
   left: 0;
   position: absolute;
   right: 0;
